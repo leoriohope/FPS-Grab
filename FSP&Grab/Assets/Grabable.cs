@@ -51,7 +51,6 @@ public class Grabable : MonoBehaviour
                     transform.parent = null;
                     beingCarried = false;
                     GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
-                // RandomAudio();
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
@@ -61,15 +60,7 @@ public class Grabable : MonoBehaviour
                 }
             }
         }
-    // void RandomAudio()
-    // {
-    //     if (audio.isPlaying){
-    //         return;
-    //             }
-    //     audio.clip = soundToPlay[Random.Range(0, soundToPlay.Length)];
-    //     audio.Play();
 
-    // }
    void OnTriggerEnter()
     {
         if (beingCarried)
